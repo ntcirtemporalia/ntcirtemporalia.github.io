@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../bootstrap/css/style.css" rel="stylesheet">
+    <title>Temporalia</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <h2 class="header">NTCIR Temporal Information Access (Temporalia)</h2>
+    <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <li><a href="../index.html">HOME</a></li>
+        <li class="active"><a href="#tab2">NTCIR-11</a></li>
+        <li><a href="./NTCIR-12/cfp.html" data-toggle="tab">NTCIR-12</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="container-fluid">
+	<div class="row-fluid">
+	  <div class="span3">
+            <ul class="sidebar" style="list-style:none">
+	      <li class="active">CALL FOR PARTICIPATION</li>
+	      <li><a href="./taskdescription.html">TASK DESCRIPTION</a></li>
+	      <li><a href="./collection.html">DOCUMENT COLLECTION</a></li>
+	      <li><a href="./formats.html">RUN FORMATS</a></li>
+	      <li><a href="./howto.html">HOWTO AND FAQ</a></li>
+	      <li><a href="./dates.html">IMPORTANT DATES</a></li>
+	      <li><a href="./organizers.html">ORGANIZERS</a></li>
+            </ul>
+	  </div>
+	  <div class="span9">
+	    <h3>Call for participation</h3>
+	    <br/>
+	    ###############################################################<br>
+	    Call for participation<br><br>
+	    NTCIR-11 Temporal Information Access (Temporalia) Task<br>
+	    <a href="http://ntcirtemporalia.github.io/">http://ntcirtemporalia.github.io/</a><br>
+	    <a href="http://ntcir.nii.ac.jp/Temporalia/NTCIR-11-Temporalia/">
+		http://ntcir.nii.ac.jp/Temporalia/NTCIR-11-Temporalia/
+	    </a><br><br>
+	    Registration:<br>
+	    <a href="http://ntcir.nii.ac.jp/NTCIR11Regist/">http://ntcir.nii.ac.jp/NTCIR11Regist/</a><br><br>
+	    Important Dates:<br>
+	    <table class="table" style="width:400px;">
+	      <tr><td>Jan 20, 2014:</td><td>registration due</td></tr>
+	      <tr><td>Mar 30, 2014:</td><td>testing data for formal run released</td></tr>
+	      <tr><td>Jun 30, 2014:</td><td>formal run submissions due</td></tr>
+	      <tr><td>Aug 1, 2014:</td><td>evaluation results released</td></tr>
+	      <tr><td>Sep 1, 2014:</td><td>participant draft papers due</td></tr>
+	      <tr><td>Nov 1, 2014:</td><td>camera ready papers due</td></tr>
+	      <tr><td>Dec 9-12, 2014:</td><td>NTCIR-11 conference @ NII, Tokyo, Japan</td></tr>
+	    </table>
+	    ###############################################################<br><br>
+	    <h4>===OVERVIEW===</h4>
+	    The objective of Temporalia is to foster research in temporal information access. 
+	    Given the fact that time plays crucial role in estimating information relevance and 
+	    validity we believe that successful search engines must consider temporal aspects of 
+	    information in greater detail. 
+	    We propose a challenge that establishes common grounds for designing and analyzing 
+	    temporally-aware information access systems. 
+	    We plan to focus on Information Retrieval first at NTCIR-11 with potential extension 
+	    to other applications at NTCIR-12 (hence the task name).<br><br>
+	    Temporal Information Retrieval has been gaining a lot of interest in IR and related 
+	    research communities. 
+	    It can be defined as a subset of document retrieval in which time plays crucial role 
+	    in estimating document relevance. 
+	    The objective of this task is to systematize various requirements in Temporal IR and 
+	    offer a standardized challenge based on which competing systems can be compared and analyzed. 
+	    Although many of temporal information needs seek for recent (fresh) information, 
+	    a good proportion of them also search for information about past incidents as well as future 
+	    incidents. 
+	    Although there are several evaluation tasks that involve search and filtering over 
+	    time (e.g., TDT, NTCIR GeoTime, TREC Temporal Summarization), 
+	    there is no test collection to measure the performance of search applications across 
+	    temporal information needs categories such as Past, Recent, and Future in a systematic way.
+	    <br><br>
+	    <h4>===TASKS====</h4>
+	    Temporalia at NTCIR-11 will offer two subtasks to address temporal information access 
+	    technologies as follows. 
+	    Interested researchers and research groups can participate in either or both of the subtasks.
+	    <br><br>
+	    <h5>- Temporal Query Intent Classification (TQIC) subtask</h5>
+	    TQIC subtask asks participants to classify a given query string to one of temporal classes: 
+	    Past, Recency, Future, or Atemporal. 
+	    Participants will receive a set of query strings and query submitting date, 
+	    and develop a system to classify each of the query strings to one of temporal classes. 
+	    Participants were allowed to use any external resources to complete the TQIC subtask 
+	    as long as the detail of external resource usage is described in their report. 
+	    This subtask does not require to index our document collection.<br>
+	    You can see the example queries for each class here:<br>
+	    <a href="https://sites.google.com/site/ntcirtemporalia/task-description">
+	    https://sites.google.com/site/ntcirtemporalia/task-description</a><br><br>
+	    <h5>- Temporal Information Retrieval (TIR) subtask</h5>
+	    TIR subtask asks participants to retrieve a set of documents from a provided document 
+	    collection in response to a search topic that incorporates time factor. 
+	    In addition to a typical search topic description (i.e., title, description, and sub topics), 
+	    TIR search topic description will contain a query submitting date information to indicate 
+	    the relationship between the query and searcher. 
+	    This subtask requires to index the document collection.<br>
+	    You can see the example search topics here:<br>
+	    <a href="https://sites.google.com/site/ntcirtemporalia/task-description">
+              https://sites.google.com/site/ntcirtemporalia/task-description</a><br><br>
+	    Training data for dry runs for both the tasks is expected to be released by Jan 30, 2014.<br><br>
+	    Please note:<br>
+	    Task participants must submit a paper for the NTCIR-11 meeting (unrefereed) and at least 
+	    one member of participated groups must attend the meeting at NII, Tokyo in December 2014.<br><br>
+	    Please visit Temporalia website for more information about the task:<br>
+	    <a href="https://sites.google.com/site/ntcirtemporalia/home">
+	      https://sites.google.com/site/ntcirtemporalia/home</a><br>
+	    <a href="http://ntcir.nii.ac.jp/Temporalia/NTCIR-11-Temporalia/">
+	      http://ntcir.nii.ac.jp/Temporalia/NTCIR-11-Temporalia/</a> (Mirror)<br><br>
+	    <h4>===ORGANIZERS===</h4>
+	    Hideo Joho (University of Tsukuba, Japan)<br>
+	    Adam Jatowt (Kyoto University, Japan)<br>
+	    Roi Blanco (Yahoo! Research Barcelona, Spain)<br>
+	    <br>
+	    <h4>===CONTACT===</h4>
+	    tc4fia at googlegroups dot com
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
