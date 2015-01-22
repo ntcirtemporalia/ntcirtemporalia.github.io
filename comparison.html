@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/style.css" rel="stylesheet">
+    <title>Temporalia</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <h2 class="header">NTCIR Temporal Information Access (Temporalia)</h2>
+    <div class="container">
+      <div class="container-fluid">
+	<div class="row-fluid">
+	  <div class="span3">
+            <ul class="sidebar" style="list-style:none">
+              <li><a href="./index.html">HOME</a></li>
+              <li><a href="./overview.html">OVERVIEW</a></li>
+              <li class="active">COMPARISON WITH <br/>OTHER TASKS</li>
+            </ul>
+	  </div>
+	  <div class="span9">
+	    <h3>Comparison with other tasks</h3>
+	    <br/>
+	    <h4>Q: What is the difference between TREC Temporal Summarization Task (TempSum) with Temporalia?</h4>
+	    <br/><p class="answer">
+	      A: TREC Temporal Summarization task (<a href="http://www.trec-ts.org/">http://www.trec-ts.org/</a>) 
+	      is composed of two subtasks: 
+	      Sequential Update Summarization and Value Tracking. The task of Sequential Update Summarization 
+	      is to find timely, sentence-level, reliable, relevant and non-redundant updates about developing event. 
+	      Value tracking aims at tracking values of event-related attributes that are of high importance to the event. 
+	      Examples are the number of fatalities or financial impact. 
+	      Both subtasks have clear temporal character since the updates have to be timely and relevant. 
+	      Their outcome is then related to the subtask of ranking documents for the "recency" class of 
+	      queries (Temporal Information Retrieval subtask). 
+	      However, in the case of TempSum the scope is limited to the information about a concrete past 
+	      event or to a particular type of attribute-like information such as a numerical value, etc. 
+	      Also, returned information needs to be short and non-redundant.
+	    </p>
+	    <br/><p class="answer">
+	      Temporal Information Retrieval subtask in Temporalia, on the other hand, 
+	      can take any category of temporal query as input. 
+	      The results are in the form of ranked list of documents for which neither redundancy nor 
+	      text length play any special role.
+	    </p>
+	    <br/>
+	    <h4>Q: What is the relation of TREC KBA to Temporalia?</h4>
+	    <br/><p class="answer">
+	      A: TREC Knowledge Base Acceleration (KBA) (
+	      <a href="http://trec-kba.org/trec-kba-2013.shtml">http://trec-kba.org/trec-kba-2013.shtml</a>
+	      ) is a task for filtering a large stream of text to find documents that can help update knowledge 
+	      bases like Wikipedia, FaceBook, Crunchbase. It 
+	      is composed of two subtasks: Cumulative Citation Recommendation and Streaming Slot Filling. 
+	      The former is about filtering documents that are worth citing in a profile of selected entities 
+	      (profile could be a Wikipedia page of the entity).
+	      It does not put any requirement on temporality neither novelty of the content. 
+	      On the other hand, Streaming Slot Filling tracks the attributes and relations of a selected entity over time. 
+	      As the organizers state, it virtually “allows the target entity to "move" as accumulated content 
+	      implies modifications to the attributes, relations, and free text associated with” an entity. 
+	      Thus, again, like in the case of TempSum, the temporal information need is in the form of 
+	      the recency requirement put on documents related to a particular entity such as a person or organization.
+	    </p>
+	    <br/>
+	    <h4>Q: Are there any similarities of Temporalia with GeoCLEF task?</h4>
+	    <br/><p class="answer">
+	      A: Space and time are commonly treated as orthogonal or parallel dimensions. 
+	      GeoCLEF 2008 task (<a href="http://www.uni-hildesheim.de/geoclef/">http://www.uni-hildesheim.de/geoclef/</a>) 
+	      required to categorize queries into geographic queries and non geographic queries. 
+	      Similarly, in Temporalia the query categorization task consists of deciding whether query is temporal 
+	      or non-temporal. 
+	      GeoCLEF also looked deeper into the subparts of geographic queries differentiating typical three parts: 
+	      "where", "geo-relation" and "what" components. The "what" component is of a map type 
+	      (e.g., river, beach, mountain, monuments), yellow page type (e.g., businesses or organizations, 
+	      like hotels, restaurants, hospitals) or information type. 
+	      In Temporalia we propose deeper, hierarchy of query categorization proposing diverse query types 
+	      such as recency, past-related or future-related queries. We then set up the second task consisting of 
+	      ranking documents for diverse temporal query types.
+	    </p>
+	    <br/>
+	    <h4>Q: Then how about Geotemporal Information Retrieval GeoCLEF task (GEOTIME)?</h4>
+	    <br/><p class="answer">
+	      A: GeoTime task (<a href="http://metadata.berkeley.edu/NTCIR-GeoTime/">
+		http://metadata.berkeley.edu/NTCIR-GeoTime/</a>) aims at answering mixed geo-temporal 
+	      information needs represented by questions such as "When and where did George Kennan die?" 
+	      or "When and where were the last three Winter Olympics held?". 
+	      The temporal answer is in the form of date or period/interval type variable. 
+	      In Temporalia we focus on more diverse types of temporal search needs 
+	      (e.g., ones for which freshness and timeliness of answers play key role and so on).
+	    </p>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,32 +3,8 @@
   <head>
     <meta name="viewport" content="width-device-width, initial-scale-1.0">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/style.css" rel="stylesheet">
     <title>Temporalia</title>
-    <style tyle="text/css">
-      body {
-      padding-top: 40px;
-      padding-bottom: 40px;
-      background-color: #f5f5f5;
-      }
-      .header {
-      max-width: 900px;
-      padding: 19px 29px 29px;
-      margin: 0 auto 20px;
-      }
-      .container {
-      max-width: 900px;
-      padding: 19px 29px 29px;
-      margin: 0 auto 20px;
-      background-color: #fff;
-      border: 1px solid #e5e5e5;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-    </style>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery.js"></script>
@@ -37,17 +13,44 @@
     <div class="container">
       <div class="container-fluid">
 	<div class="row-fluid">
-	  <div class="span2">
-	    <!--Sidebar content-->
-	    <ul class="nav nav-list">
-	      <li class="active">HOME</li>
-	      <li><a href="./ntcir-11.html">OVERVIEW</a></li>
-	      <li><a href="ORGANISERS"
-	    </ul>
+	  <div class="span3">
+            <ul class="sidebar" style="list-style:none">
+              <li class="active">HOME</li>
+	      <li><a href="./overview.html">OVERVIEW</a></li>
+	      <li><a href="./comparison.html">COMPARISON WITH <br/>OTHER TASKS</a></li>
+            </ul>
 	  </div>
-	  <div class="span10">
-	    main
-	    <!--Body content-->
+	  <div class="span9">
+	    <h3>Home</h3>
+	    <br/>
+	    <p>Welcome to the home page of NTCIR Temporal Information Access (Temporalia) Task. 
+	      Temporalia is a new pilot task accepted to run at 
+	      <a href="http://research.nii.ac.jp/ntcir/ntcir-11/index.html">NTCIR-11</a>. 
+	      Please subscribe to 
+	      <a href="https://groups.google.com/forum/#!forum/ntcirtemporalia">our discussion group</a> 
+	      if you're interested in the task.</p><br/>
+	    <p>Please contact us for informal enquiries: tc4fia at googlegroups dot com.</p><br/>
+	    <p class="text-error"><b>
+		<span class="stk">Paper submission deadline: September 15th, 2014 (Hawaii Time)</span><br/>
+		Camera-Ready Paper submission deadline: November 1st, 2014 (Hawaii Time)</b></p><br/>
+	    <p>Temporalia is also described in the recent publication:</p><br/>
+	    <p>Hideo Joho, Adam Jatowt, and Roi Blanco: 
+	      <a href="http://www.dl.kuis.kyoto-u.ac.jp/~adam/tempweb14.pdf">NTCIR Temporalia: 
+		A Test Collection for Temporal Information Access Research</a>, 
+	      Proceedings of the 4th Temporal Web Analytics Workshop (TempWeb 2014), 
+	      ACM Press, Seoul, Korea, pp. 845-849.</p><br/>
+	    <h4>Follow us</h4>
+	    <ul>
+	      <li><a href="https://groups.google.com/forum/#!forum/ntcirtemporalia">Google Groups</a></li>
+	      <li><a href="https://www.facebook.com/ntcirtemporalia">Facebook Page</a></li>
+	      <li><a href="https://twitter.com/ntcirtemporalia">Twitter (#ntcirtemporalia)</a></li>
+	      <li><a href="http://ntcir.nii.ac.jp/Temporalia/NTCIR-11-Temporalia/">Mirror Site</a></li>
+	    </ul>
+	    <br/>
+	    <h4>News</h4>
+	    <a class="twitter-timeline" href="https://twitter.com/ntcirtemporalia" data-widget-id="351990564666888192">
+	      Tweets by @ntcirtemporalia</a> 
+	    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	  </div>
 	</div>
       </div>
