@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../bootstrap/css/style.css" rel="stylesheet">
+    <title>Temporalia</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <h2 class="header">NTCIR Temporal Information Access (Temporalia)</h2>
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li><a href="../index.html">HOME</a></li>
+        <li class="active"><a href="#tab2">NTCIR-11</a></li>
+        <li><a href="./NTCIR-12/cfp.html" data-toggle="tab">NTCIR-12</a></li>
+      </ul>
+      <div class="container-fluid">
+	<div class="row-fluid">
+	  <div class="span3">
+            <ul class="sidebar" style="list-style:none">
+	      <li><a href="./cfp.html">CALL FOR PARTICIPATION</a></li>
+	      <li><a href="./taskdescription.html">TASK DESCRIPTION</a></li>
+	      <li><a href="./collection.html">DOCUMENT COLLECTION</a></li>
+	      <li><a href="./formats.html">RUN FORMATS</a></li>
+	      <li><a href="./submission.html">PAPER SUBMISSION</a></li>
+	      <li class="active">HOWTO AND FAQ</li>
+	      <li><a href="./dates.html">IMPORTANT DATES</a></li>
+	      <li><a href="./organisers.html">ORGANISERS</a></li>
+            </ul>
+	  </div>
+	  <div class="span9">
+	    <h3>Howto and FAQ</h3>
+	    <br>
+	    <h4>[Important] Why do we need to freeze system development before running formal run data?</h4>
+	    It is critical that all participants stop the system development before running formal run data, 
+	    either for TQIC or TIR subtasks. 
+	    Formal run data should be treated as unseen queries or topics in the evaluation. 
+	    Therefore, any manual changes should NOT be made to system components or setting that are learnt 
+	    from formal run queries or topics. 
+	    Dry run data can be used to train or tune your system, but not formal run data. 
+	    However, automatic techniques that are applied to formal run data at query time on the fly are fine.
+	    <br><br>
+	    Of course, there is nothing we can physically force you to follow this rule, 
+	    but we trust our participants to conduct fair and professional experimentation with the test collection.
+	    <br><br>
+	    Please contact us if you're not sure to what extent is allowed and not.
+	    <br><br>
+
+	    <h4>What is the difference between automatic runs and manual runs?</h4>
+	    A similar but different issue is that, if your runs contain any form of manual intervention to produce the output, 
+	    that will classified as "manual runs" rather than "automatic runs". 
+	    A typical manual run might be that a human reads the topic description and formulate a query, 
+	    submit it to the system. 
+	    In the submission page, you should have a selection to indicate a type of runs. 
+	    Whether your run is automatic or manual, system development must be frozen before looking at formal run data, 
+	    as explained above.
+	    <br><br>
+	    
+	    <h4>How to correct some markup inconsistency</h4>
+	    <a href="https://www.dropbox.com/s/0o62x1h2kj2dy1z/CheckSyntax.class">CheckSyntax.class</a> 
+	    is a Java class to turn the original document collection files into sanitised XML format. 
+	    The program uses <a href="http://jsoup.org/">JSoup</a> library as follows.
+	    <br><br>
+	    <pre><code>java -Xmx5G -cp .:jsoup-1.7.3.jar CheckSyntax INPUT_FILE > OUTPUT_FILE</code></pre>
+	    <br>
+	    Note that the output tags will be -lowercased-, 
+	    the doc ids between quotes and symbols should be properly xml-escaped (" to " and so on).
+	    <br><br>
+
+	    <h4>Can I use external resources?</h4>
+	    Yes, you can. However, please make sure to indicate the use of external resources when submitting a run. 
+	    Please also make sure to provide the details of external resources in your report. 
+	    For more detail, please read our 
+	    <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">task description</a>.
+	    <br><br>
+	    An external resource is anything but those are generated from topic descriptions and document collection. 
+	    A temporal tagger, dictionary, Wikipedia, WordNet, or any statistics calculated from other resources are external resources.
+	    <br><br>
+
+	    <h4>How should I compile the output of my system?</h4>
+	    Please read the <a href="http://ntcirtemporalia.github.io/NTCIR-11/formats.html">run format</a> 
+	    to understand the layout of output files and their name.
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

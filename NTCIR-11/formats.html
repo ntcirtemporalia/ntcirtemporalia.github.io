@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../bootstrap/css/style.css" rel="stylesheet">
+    <title>Temporalia</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <h2 class="header">NTCIR Temporal Information Access (Temporalia)</h2>
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li><a href="../index.html">HOME</a></li>
+        <li class="active"><a href="#tab2">NTCIR-11</a></li>
+        <li><a href="./NTCIR-12/cfp.html" data-toggle="tab">NTCIR-12</a></li>
+      </ul>
+      <div class="container-fluid">
+	<div class="row-fluid">
+	  <div class="span3">
+            <ul class="sidebar" style="list-style:none">
+	      <li><a href="./cfp.html">CALL FOR PARTICIPATION</a></li>
+	      <li><a href="./taskdescription.html">TASK DESCRIPTION</a></li>
+	      <li><a href="./collection.html">DOCUMENT COLLECTION</a></li>
+	      <li class="active">RUN FORMATS</li>
+	      <li><a href="./submission.html">PAPER SUBMISSION</a></li>
+	      <li><a href="./howto.html">HOWTO AND FAQ</a></li>
+	      <li><a href="./dates.html">IMPORTANT DATES</a></li>
+	      <li><a href="./organisers.html">ORGANISERS</a></li>
+            </ul>
+	  </div>
+	  <div class="span9">
+	    <h3>Run Formats</h3>
+	    <br/>
+	    <span class="text-error">Please read our 
+	      <a href="http://ntcirtemporalia.github.io/NTCIR-11/howto.html">important notification</a> 
+	      before running formal run data with your system.</span><br><br>
+	    
+	    To submit the outputs of your system (called "runs"), 
+	    you need to follow the run format defined as below. 
+	    The runs formatted in a wrong way will not be assessed by the organizers.<br><br>
+
+	    <h4>Temporal Query Intent Classification (TQIC) subtask:</h4>
+	    <pre><code>id      class      group_id     run_id
+001     future     roi_y        roi_y_system1
+002     past       roi_y        roi_y_system1
+...</code></pre>
+	    Each line should contain tab separated result for a different query. 
+	    "id" is query identifier, while "class" represents the temporal class of query's 
+	    intent and should be one of: past, future, recent, atemporal. 
+	    "group_id" is an identifier of the group submitting the run and "run_id" is 
+	    the run number for the group. 
+	    For example, if you have two systems with different algorithms or parameters, 
+	    please use a different run ID for different system settings.<br><br>
+	    
+	    Each group can submit <b>up to three runs</b> (i.e., Run IDs) for the TQIC subtask.<br><br>
+	    
+	    <h4>Temporal Information Retrieval (TIR) subtask:</h4>
+	    <pre><code>id       rank     doc_id    group_id    run_id
+001a     1        DOC1      roi_y       roi_y_system2
+001p     2        DOC2      roi_y       roi_y_system2
+...</code></pre>
+	    Each line should contain <b>tab separated</b> result containing relevant document 
+	    to a given subtopic. You can return up to 100 documents for each subtopic.<br><br>
+	    
+	    "id" is the query id, which is a concatenation of the query id and "p", "a", 
+	    "r" or "f" that indicate the past, atemporal, recent and future subtopics, respectively. 
+	    "rank" is the rank of the document for that query, "group_id" is an identifier of 
+	    the group submitting the run and "run_id" is the run number for the group.  
+	    For example, if you have two systems with different algorithms or parameters, 
+	    please use a different run ID for different system settings. 
+	    Documents are identified by doc_id.<br><br>
+	    
+	    Each group can submit <b>up to three runs</b> (i.e., Run IDs) for the TIR subtask.<br><br>
+
+	    <h4>File name and format</h4>
+	    Please use one file per subtask, and name your files with the subtask name and group id 
+	    (e.g., tqic_roi_y and tir_roi_y). 
+	    <span class="stk">You can append multiple runs in a single file.</span> 
+	    <b>Please use one file per run ID for formal runs.</b> 
+	    Regardless of the number of subtasks you're submitting, please zip all the files, 
+	    and name it as "group_id.zip" before uploading to the 
+	    <a href="http://ntcirtemporalia.github.io/NTCIR-11/submission.html">submission system</a>.
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

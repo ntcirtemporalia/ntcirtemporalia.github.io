@@ -1,5 +1,5 @@
 body {
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 40px;
   background-color: #f5f5f5;
 }
@@ -10,10 +10,9 @@ h2.header {
   margin: 0 auto 20px; 
 }
 
-div.tabbable {
+ul.nav {
   float:right;
-  padding-right:115px;
-  margin-top: -37px;
+  margin-top: -55px;
 }
 
 .container {
@@ -54,5 +53,6 @@ li.active {
   margin-left: -20px;
   margin-right: 10px;
 }
+
 span.stk { text-decoration:line-through; }
 p.answer { margin-left: 30px;}

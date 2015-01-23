@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../bootstrap/css/style.css" rel="stylesheet">
+    <title>Temporalia</title>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <h2 class="header">NTCIR Temporal Information Access (Temporalia)</h2>
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li><a href="../index.html">HOME</a></li>
+        <li class="active"><a href="#tab2">NTCIR-11</a></li>
+        <li><a href="./NTCIR-12/cfp.html" data-toggle="tab">NTCIR-12</a></li>
+      </ul>
+      <div class="container-fluid">
+	<div class="row-fluid">
+	  <div class="span3">
+            <ul class="sidebar" style="list-style:none">
+	      <li><a href="./cfp.html">CALL FOR PARTICIPATION</a></li>
+	      <li><a href="./taskdescription.html">TASK DESCRIPTION</a></li>
+	      <li class="active">DOCUMENT COLLECTIO</li>
+	      <li><a href="./formats.html">RUN FORMATS</a></li>
+	      <li><a href="./submission.html">PAPER SUBMISSION</a></li>
+	      <li><a href="./howto.html">HOWTO AND FAQ</a></li>
+	      <li><a href="./dates.html">IMPORTANT DATES</a></li>
+	      <li><a href="./organisers.html">ORGANISERS</a></li>
+            </ul>
+	  </div>
+	  <div class="span9">
+	    <h3>Document Collection</h3>
+	    <br/>
+	    NTCIR-11 Temporalia uses a web corpus, called 
+	    "LivingKnowledge news and blogs annotated subcollection", constructed by the 
+	    <a href="http://internetmemory.org/en/index.php/projects/livingknowledge">LivingKnowledge</a> 
+	    project and distributed by 
+	    <a href="http://internetmemory.org/">Internet Memory</a>.<br><br>
+	    The collection is 20G uncompressed and over 5G zipped. 
+	    It spans from May 2011 to March 2013 and contains around 3.8M documents collected 
+	    from about 1500 different blogs and news sources. 
+	    The data is split into 970 files, named after the date of that day and some information 
+	    about its sources (there might be more than one file per day).<br><br>
+	    Each file contains a number of text documents. 
+	    For each document the following information is available <br><br>
+	    <pre><code>&lt;doc id=lk-20130223040102_592&gt;
+&lt;meta-info&gt;
+&lt;tag name="host"&gt;www.spiegel.de&lt;/tag&gt;
+&lt;tag name="data"&gt;2013-02-22&lt;/tag&gt;
+&lt;tag name="url"&gt;http://www.spiegel.de/international/business/eu-widens-libor-scandal-investigation-and-threatens-heavy-fines-a-884948.html#ref=rss&lt;/tag&gt;
+&lt;tag name="sourcerss"&gt;http://www.spiegel.de/international/index.rss&lt;/tag&gt;
+&lt;tag name="title"&gt;EU Widens LIBOR Scandal Investigation and Threatens Heavy Fines&lt;/tag&gt;
+&lt;/meta-info&gt;
+&lt;text&gt;
+...
+&lt;/text&gt;</code></pre><br>
+	    The "doc id" refers to a unique document identifier in the collection. 
+	    The "host" contains the hostname the text was pulled from, 
+	    the "date" the publishing data of the document, the "url" the url the text was pulled from,  
+	    the "sourcerss" the rss that was accessed to retrieve the page, and finally, 
+	    the "title" the title of the page.<br><br>
+
+	    Between the &lt;text&gt; tags, there’s the content of the page. 
+	    This collection also provides three kinds of annotations: Sentence splitting, 
+	    Named Entities, and Time annotations.
+	    Each sentence in the content of the page is surrounded by &lt;SE&gt; tags.<br><br>
+
+	    Each identified named entity is surrounded by the &lt;E&gt; tags. 
+	    The type of the entity is included inside the tag, for instance 
+	    &lt;E type="E:ORGANIZATION:CORPORATION"&gt;YouWalkAway.com&lt;/E&gt;.<br><br>
+
+	    Each time reference identified in the text is surrounded by the tag &lt;T&gt; 
+	    &lt;T val="2012"&gt;the end of 2012&lt;/T&gt; which contains a "val" element 
+	    referring to the estimated point in time the annotation is referring to.<br><br>
+	    
+	    An example of documents can be found below.<br><br>
+	    <img src="https://sites.google.com/site/ntcirtemporalia/document-collection/sampledocs.png?attredirects=0" width="80%"><br><br>
+	    We will provide a script to remove these annotations and leave only the textual 
+	    part of each page, if the participants wish to only use that.<br><br>
+	    <h4>How to get a copy of the document collection</h4>
+	    Please contact us via 
+	    <a href="https://groups.google.com/forum/#!forum/ntcirtemporalia">Google Groups</a>
+	    or email (tc4fia at googlegroups dot com) 
+	    first with your name, affiliation, and registered group id. 
+	    We will then let you know the contact address of Leïla Medjkoune, Head of Web Archiving, 
+	    <a href="http://internetmemory.org/">Internet Memory</a>, 
+	    who manages the distribution of the document collection.<br><br>
+	    <h4>How to remove tags and correct markup inconsistency</h4>
+	    Please read <a href="http://ntcirtemporalia.github.io/NTCIR-11/howto.html">HOWTO and FAQ</a>.
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
