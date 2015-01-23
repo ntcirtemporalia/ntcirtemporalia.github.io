@@ -32,21 +32,27 @@
 	  </div>
 	  <div class="span9">
 	    <h3>Task Description</h3>
-	    <br/>
-	    Temporalia at NTCIR-11 will offer two subtasks to address temporal information access technologies as follows. 
-	    Interested researchers and research groups can participate in either or both of the subtasks.<br><br>
+	    <br>
+	    Temporalia at NTCIR-11 will offer two subtasks to address temporal 
+	    information access technologies as follows. 
+	    Interested researchers and research groups can participate in either or both of the subtasks.
+	    <br><br>
 	    
 	    <p class="text-error"><b>
 	      Please read our <a href="http://ntcirtemporalia.github.io/NTCIR-11/howto.html">
 		important notification </a>before running formal run data with your system.
 	    </b></p><br>
-	    <h4>Temporal Query Intent Classification (TQIC) subtask</h4><br>
+	    
+	    <h4>Temporal Query Intent Classification (TQIC) subtask</h4>
 	    TQIC subtask asks participants to classify a given query string to one of temporal classes. 
 	    Participants will receive a set of query strings and query submitting date, 
 	    and develop a system to classify each of the query strings to one of temporal classes. 
-	    Participants were allowed to use any external resources to complete the TQIC subtask as long as the detail of 
-	    external resource usage is described in their report. This subtask does not require to index our 
-	    <a href="http://ntcirtempiralia.github.io/NTCIR-11/collection.html">document collection</a>.<br>
+	    Participants were allowed to use any external resources to complete the TQIC subtask 
+	    as long as the detail of external resource usage is described in their report. 
+	    This subtask does not require to index our 
+	    <a href="http://ntcirtempiralia.github.io/NTCIR-11/collection.html">document collection</a>.
+	    <br><br>
+	    
 	    <h5>Sample queries and corresponding temporal classes</h5>
 	    <table border="1px" style="width:400px;">
 	      <tr><th>Class</th><th>Query</th></tr>
@@ -71,7 +77,9 @@
 	      <tr><td>Atemporal</td><td>New York Times</td></tr>
 	      <tr><td>Atemporal</td><td>lose weight quickly</td></tr>
 	    </table><br>
-	    Query submitting date is assumed to be on Feb 28, 2013 GMT+0:00 for all queries shown above.<br><br>
+	    Query submitting date is assumed to be on Feb 28, 2013 GMT+0:00 for all queries shown above.
+	    <br><br>
+
 	    <h5>Conceptual (working) definitions of temporal classes</h5>
 	    <ul>
 	      <li><b>Past query</b>: query about past events, whose search results are not expected to 
@@ -85,19 +93,26 @@
 	      <li><b>Atemporal query</b>: query without any clear temporal intent (its returned search results are 
 		not expected to be related to time). Navigational queries are considered to be atemporal.</li>
 	    </ul><br>
+	    
 	    <h5>What participants need to submit, and how to measure the performance</h5>
 	    Participants are asked to submit a temporal class (Past, Recency, Future, or Atemporal) for each of the queries. 
 	    The performance of submitted runs will be measured by the number of queries with correct temporal classes divided 
-	    by the total number of queries. We will provide the breakdown of the performance based on temporal classes.<br><br>
+	    by the total number of queries. We will provide the breakdown of the performance based on temporal classes.
+	    <br><br>
+
 	    <h5>Number of queries to be delivered</h5>
-	    We plan to deliver 100 queries for dry runs, and deliver another 100 300 queries for formal runs.<br><br>
-	    <h4>Temporal Information Retrieval (TIR) subtask</h4><Br>
+	    We plan to deliver 100 queries for dry runs, and deliver another 100 300 queries for formal runs.
+	    <br><br>
+	    
+	    <h4>Temporal Information Retrieval (TIR) subtask</h4>
 	    TIR subtask asks participants to retrieve a set of documents in response to a search topic that incorporates time factor. 
 	    In addition to a typical search topic description (i.e., title, description, and sub topics), 
 	    TIR search topic description will contain a query submitting date information to indicate the relationship between 
 	    the query and searcher. Participants were allowed to use any external resources to complete the TIR subtask as long as 
 	    the detail of external resource usage is described in their report. This subtask require to index our 
-	    <a href="http://ntcirtemporalia.github.io/collection.html">document collection</a>.<br><br>
+	    <a href="http://ntcirtemporalia.github.io/collection.html">document collection</a>.
+	    <br><br>
+	    
 	    <h5>Sample search topics</h5>
 	    <table border="1px" style="width:570px;">
 	      <tr><th width="130px" align="left">Title</th><td>Girl with the Dragon Tattoo</td></tr>
@@ -119,19 +134,26 @@
 		  how the father's role is supposed to change?</td></tr>
 	      <tr><th align="left">Atemporal subtopic</th><td>What are common gifts for Father's day?</td></tr>
 	      <tr><th align="left">Search date</th><td>1 Mar 2013 GMT+0:00</td></tr>
-            </table><br><br>
+            </table>
+	    <br><br>
+	    
 	    <h5>What participants need to submit, and how to measure the performance</h5>
 	    Participants are asked to submit the top 100 documents for each of temporal subtopic per topic 
 	    (i.e., top 100 documents for past subtopic, another 100 for recency subtopic, etc.). 
 	    The retrieval effectiveness will be evaluated by the precision at 20 for each of the temporal subtopic. 
-	    We will provide the breakdown of the performance across temporal classes.<br><br>
+	    We will provide the breakdown of the performance across temporal classes.
+	    <br><br>
+
 	    <h5>Number of search topics to be delivered</h5>
 	    We plan to deliver 10 search topics (with 4 temporal subtopic per topic) for dry runs. 
-	    We plan to deliver 50 search topics for formal runs.<br><br>
+	    We plan to deliver 50 search topics for formal runs.
+	    <br><br>
+	    
 	    <h5>Topic fields to use for your ranking</h5>
 	    It is up to you about what fields of topic descriptions are used as system inputs. 
 	    However, please make sure to report the input fields when you submit a run and when you write a participant report. 
-	    Typical combinations might be<br><br>
+	    Typical combinations might be
+	    <br><br>
 	    <ul>
 	      <li>Title and subtopic</li>
 	      <li>Title, Description, and subtopic</li>
@@ -139,7 +161,9 @@
 	    <span class="text-error">Please do not use the subtopic class information</span>.
 	    For the convenience of data management, subtopic IDs of TIR contain a token of temporal classes 
 	    such as 001p for past subtopic and 001f for future subtopic. 
-	    However, please do not use this token as an input to your system.<br><br>
+	    However, please do not use this token as an input to your system.
+	    <br><br>
+	    
 	    <h4>Feedback or suggestions?</h4>
 	    NTCIR-11 Temporalia is a pilot task which means that we are still in development of evaluation methodology. 
 	    Therefore, if you have any feedback or suggestions for our task design, 
