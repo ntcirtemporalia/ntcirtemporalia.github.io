@@ -30,7 +30,8 @@ ul.nav {
 }
 
 ul.sidebar {
-  padding-top: 10px;
+  padding-top: 15px;
+  margin-left: -5px;
 }
 
 li {
