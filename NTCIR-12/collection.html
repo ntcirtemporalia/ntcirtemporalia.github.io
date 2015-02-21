@@ -31,8 +31,8 @@
             </ul>
 	  </div>
 	  <div class="span9">
-	    <h3>English Document Collection</h3>
-	    <br>
+	    <h3>Document collection</h3><br>
+	    <h4>English document collection</h4>
 	    NTCIR-12 Temporalia uses a web corpus, called
             "LivingKnowledge news and blogs annotated subcollection", constructed by the
             <a href="http://internetmemory.org/en/index.php/projects/livingknowledge">LivingKnowledge</a>
@@ -58,7 +58,7 @@
 &lt;/text&gt;</code></pre><br>
             The "doc id" refers to a unique document identifier in the collection.
             The "host" contains the hostname the text was pulled from,
-            the "date" the publishing data of the document, the "url" the url the text was pulled from,
+            the "date" the publishing data of the document, the "url" text was pulled from,
             the "sourcerss" the rss that was accessed to retrieve the page, and finally,
             the "title" the title of the page.<br><br>
 
@@ -80,6 +80,36 @@
             We will provide a script to remove these annotations and leave only the textual
             part of each page, if the participants wish to only use that.
             <br><br>
+
+	    <h4>Chinese document collection</h4>
+	    NTCIR-12 Temporalia also uses a Chinese document collection, it will be distilled subset 
+	    of the web page corpus <a href="http://www.sogou.com/labs/dl/t-e.html">SogouT (2012)</a>.
+	    <br><br>
+	    
+	    In NTCIR-12 Temporalia, for each document the following information is available <br><br>
+            <pre><code>&lt;doc id=dbb4554e49da2142-69713306c0bb3300&gt;
+&lt;meta-info&gt;
+&lt;tag name="url"&gt;http://news.sohu.com/20120607/n344998325.shtml&lt;/tag&gt;
+&lt;tag name="title"&gt;张绍刚发道歉信网友不认可：他的问题是俯视他人（图）&lt;/tag&gt;
+&lt;/meta-info&gt;
+&lt;text&gt;
+...
+&lt;/text&gt;</code></pre><br>
+	    The "doc id" refers to a unique document identifier in the collection.
+	    The "url" the url text was pulled from, and the "title" the title of the page.<br><br>
+	    
+	    Between the &lt;text&gt; tags, there's the content of the page.
+	    This collection also provides three kinds of annotations: 
+	    Sentence splitting, Named Entities, and Time annotations.
+	    Each sentence in the content of the page is surrounded by &lt;SE&gt; tags.<br><br>
+	    
+	    Each identified named entity is surrounded by the &lt;E&gt; tags.
+	    The type of the entity is included inside the tag.
+	    
+	    An example of documents can be found below.<br><br>
+	    <img src="../chinese_example.png" width="80%"><br><br>
+	    Detailed information about this document collection will be provided as soon as possible.
+	    <br><br>
 
             <h4>How to get a copy of the document collection</h4>
             Please contact us email (tc4fia at googlegroups dot com)
