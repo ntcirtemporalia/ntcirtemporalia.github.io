@@ -57,7 +57,24 @@
 	    Whether your run is automatic or manual, system development must be frozen before looking at formal run data, 
 	    as explained above.
 	    <br><br>
-	    
+
+	    <h4>How to remove all tags in the body</h4>
+	    <a href="https://www.dropbox.com/s/mi41ifb8b5go3di/temporalia_solrify.pl">temporalia_solrify.pl</a>
+	    is a Perl script used by an organiser to strip all tags from the collection and save it to a
+	    document format that can be used for <a href="https://lucene.apache.org/solr/">Solr</a>.
+	    Even if you don't use Solr as a backend system,
+	    the script might be useful for those who want to remove the tags.
+	    <br><br>
+	    Here is a quick instruction.
+	    Assuming that you have uncompressed the collection into a folder "FOLDER", then all have to do is
+	    <br><br>
+	    <pre><code>perl temporalia_solrify.pl FOLDER/input.xml</code></pre>
+	    <br>
+	    This will create a new file called "input_solr.xml" under the same folder as the original input file.
+	    We would suggest to try the script with a couple of input files first.
+	    If they are successful, you can run it on all files.
+	    <br><br>
+
 	    <h4>How to correct some markup inconsistency</h4>
 	    <a href="https://www.dropbox.com/s/0o62x1h2kj2dy1z/CheckSyntax.class">CheckSyntax.class</a> 
 	    is a Java class to turn the original document collection files into sanitised XML format. 
