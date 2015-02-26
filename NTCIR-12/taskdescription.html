@@ -33,7 +33,44 @@
 	  <div class="span9">
 	    <h3>Task Description</h3>
 	    <br>
-	    TBA
+	    Temporalia-2 at NTCIR-12 offer two subtasks in English and Chinese to address temporal 
+	    information access technologies as follows. 
+	    Interested researchers and research groups can participate in either or both of the 
+	    subtasks in any combination of languages. 
+	    <br><br>
+
+	    <h4>Temporal Intent Disambiguation (TID) Subtask</h4>
+	    TID subtask asks participants to estimate a distribution of four temporal intent classes 
+	    (Atemporal, Past, Recent, or Future) for a given query. 
+	    This is an upgraded task from 
+	    <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">
+	      Temporal Query Intent Classification (TQIC) subtask</a> 
+	    at NTCIR-11, 
+	    where participants were only asked to estimate the best (single) temporal intent category 
+	    for a given query. 
+	    Like the TQIC subtask, participants will receive a set of query strings and submission date, 
+	    and develop a system that estimates a distribution among four temporal intent classes. 
+	    TID will employ test queries more likely to be temporally ambiguous than those used in TQIC. 
+	    Participants will be allowed to use any external resources to complete the TID subtask 
+	    as long as the detail of external resource usage is reported. 
+	    This subtask does not necessarily require to index our document collection.
+	    <br><br>
+
+	    <h4>Temporally Diversified Retrieval (TDR) Subtask</h4>
+	    TDR subtask will require participants to retrieve a set of documents relevant to each of four 
+	    temporal intent classes for a given topic description. 
+	    Participants will receive a set of topic descriptions, query timestamp, 
+	    and ideal temporal class size information (e.g., 4 docs for past, 4 docs for recency, 
+	    2 docs for future). 
+	    Participants are asked to develop a system that can produce temporally diversified search 
+	    results using these input data. 
+	    This is an upgraded task from Temporal Information Retrieval (TIR) subtask at NTCIR-11 
+	    where participants were asked to retrieve documents for separate temporal subtopics. 
+	    TDR is more challenging since the system needs to optimise ranking of documents for up to 
+	    four different temporal classes for a given topic. 
+	    We further plan to add a constraint to prohibit a document’s duplicate entry to mulitple 
+	    temporal classes in the output. This subtask requires to index the document collection.
+	    
 	  </div>
 	</div>
       </div>
