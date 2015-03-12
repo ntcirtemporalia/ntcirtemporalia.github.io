@@ -97,24 +97,32 @@
 	    <div class="line"></div><br>
 
 	    <div id="Chinese"><h3>Chinese document collection</h3></div>
-	    NTCIR-12 Temporalia also uses a Chinese document collection, it will be distilled subset 
-	    of the web page corpus <a href="http://www.sogou.com/labs/dl/t-e.html">SogouT (2012)</a>
-	    and the news web pages corpus 
-	    <a href="http://www.sogou.com/labs/dl/ca.html">SogouCA (2012)</a>.
+	    For NTCIR-12 Temporalia-2, the Chinese document collections 
+	    <a href="http://www.sogou.com/labs/dl/ca.html">SogouCA (2012)</a> and
+	    <a href="http://www.sogou.com/labs/dl/t-e.html">SogouT (2012)</a>
+	    will be used for dry-run and formal run respectively.
 	    <br><br>
 	    
-	    In NTCIR-12 Temporalia, for each document the following information is available <br><br>
-            <pre><code>&lt;doc id=dbb4554e49da2142-69713306c0bb3300&gt;
-&lt;meta-info&gt;
-&lt;tag name="url"&gt;http://news.sohu.com/20120607/n344998325.shtml&lt;/tag&gt;
-&lt;tag name="title"&gt;张绍刚发道歉信网友不认可：他的问题是俯视他人（图）&lt;/tag&gt;
-&lt;/meta-info&gt;
-&lt;text&gt;
-...
-&lt;/text&gt;</code></pre><br>
-	    The "doc id" refers to a unique document identifier in the collection.
-	    The "url" the url text was pulled from, and the "title" the title of the page.<br><br>
+	    For each document, the following informaton is available
+	    <br><br>
 	    
+            <pre><code>&lt;doc id=***&gt;
+&lt;meta-info&gt;
+&lt;tag name="host"&gt;***&lt;/tag&gt;
+&lt;tag name="date"&gt;***&lt;/tag&gt;
+&lt;tag name="url"&gt;***&lt;/tag&gt;
+&lt;tag name="title"&gt;***&lt;/tag&gt;
+&lt;tag name="source-encoding"&gt;***&lt;/tag&gt;
+&lt;/meta-info&gt;
+&lt;text&gt;***&lt;/text&gt;
+&lt;/doc&gt;</code></pre><br>
+	    
+	    The "host" contains the hostname the document was pulled from, 
+	    the "date" publishing data of the document,
+	    the "url" document was pulled from, and finally,
+	    the "title" the title of the page.
+	    <br><br>
+
 	    Between the &lt;text&gt; tags, there's the content of the page.
 	    This collection also provides three kinds of annotations: 
 	    Sentence splitting, Named Entities, and Time annotations.
@@ -125,7 +133,18 @@
 	    
 	    An example of documents can be found below.<br><br>
 	    <a href="../chinese_example.png"><img src="../chinese_example.png" width="80%"></a><br><br>
-	    Detailed information about this document collection will be provided as soon as possible.
+	    
+	    Specifically, for Named Entities, there are totally 5 types of tags.
+	    PERSON, LOCATION, ORGANIZATION, GPE (geo-political entity), 
+	    MISC (by merging all but the four most dominant entity types into one general entity
+	    type called misc, i.e., miscellaneous).
+	    <br><br>
+	    
+	    For temporal expressions, a variant of the standard format TIMEX3 used in TempEavl task.
+	    <br><br>
+
+	    For dry-run, using the SogouCA(2012) cllection as input,
+	    the script for generating the untagged and tagged collections will be provided soon.
 	  </div>
 	</div>
       </div>
