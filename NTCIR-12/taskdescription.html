@@ -31,49 +31,143 @@
             </ul>
 	  </div>
 	  <div class="span9">
-	    <h3>Task Description</h3>
-	    <br>
+	    <div class="alert alert-error"><b>Updated on 6th July 2015</b>
+	      <button type="button" class="close" data-dismiss="alert">&times;</button>
+	    </div>
 	    Temporalia-2 at NTCIR-12 offer two subtasks in English and Chinese to address temporal 
 	    information access technologies as follows. 
 	    Interested researchers and research groups can participate in either or both of the 
 	    subtasks in any combination of languages. 
 	    <br><br>
+	    <a href="#TID">TID Subtask</a>&nbsp; | &nbsp;
+	    <a href="#TDR">TDR Subtask</a>
+	    <br><br>
 
-	    <h4>Temporal Intent Disambiguation (TID) Subtask</h4>
-	    TID subtask asks participants to estimate a distribution of four temporal intent classes 
-	    (Atemporal, Past, Recent, or Future) for a given query. 
+	    <div id="TID"><h3>Temporal Intent Disambiguation (TID) Subtask</h3></div>
+	    TID subtask asks participants to estimate a distribution of four temporal intent classes
+	    (Atemporal, Past, Recent, or Future) for a given query.
 	    This is an upgraded task from 
 	    <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">
-	      Temporal Query Intent Classification (TQIC) subtask</a> 
-	    at NTCIR-11, 
+	      Temporal Query Intent Classification (TQIC) subtask</a> at NTCIR-11, 
 	    where participants were only asked to estimate the best (single) temporal intent category 
-	    for a given query. 
+	    for a given query.
 	    Like the TQIC subtask, participants will receive a set of query strings and submission date, 
 	    and develop a system that estimates a distribution among four temporal intent classes. 
-	    TID will employ test queries more likely to be temporally ambiguous than those used in TQIC. 
-	    Participants will be allowed to use any external resources to complete the TID subtask 
-	    as long as the detail of external resource usage is reported. 
-	    This subtask does not necessarily require to index our document collection.
+	    TID will employ test queries more likely to be temporally ambiguous than those used in TQIC.
+	    The answer distribution is estimated from the voting crowd workers.
 	    <br>
+	    Participants are allowed to use any external resources to complete the TID subtask
+	    as long as the detail of external resource usage is reported.
+	    This subtask does not necessarily require to index our document collection.
 	    For evaluating the results,
 	    we plan to use Jensen-Shannon divergence averaged over all the queries and Root Mean Square Error.
 	    <br><br>
 
-	    <h4>Temporally Diversified Retrieval (TDR) Subtask</h4>
-	    TDR subtask will require participants to retrieve a set of documents relevant to each of four 
-	    temporal intent classes for a given topic description. 
-	    Participants will receive a set of topic descriptions, query timestamp, 
-	    and ideal temporal class size information (e.g., 4 docs for past, 4 docs for recency, 
-	    2 docs for future). 
-	    Participants are asked to develop a system that can produce temporally diversified search 
-	    results using these input data. 
-	    This is an upgraded task from Temporal Information Retrieval (TIR) subtask at NTCIR-11 
-	    where participants were asked to retrieve documents for separate temporal subtopics. 
-	    TDR is more challenging since the system needs to optimise ranking of documents for up to 
-	    four different temporal classes for a given topic. 
-	    We further plan to add a constraint to prohibit a document's duplicate entry to mulitple 
-	    temporal classes in the output. This subtask requires to index the document collection.
+	    <h5>Sample query</h5>
+	    <pre><code>&lt;query&gt;
+  &lt;id&gt;033&lt;/id&gt;
+  &lt;query_string&gt;weather in London&lt;/query_string&gt;
+  &lt;query_issue_time&gt;May 1, 2013 GMT+0&lt;/query_issue_time&gt;
+  &lt;probabilities&gt;
+    &lt;Past&gt;0.0&lt;/Past&gt;
+    &lt;Recency&gt;0.9&lt;/Recency&gt;
+    &lt;Future&gt;0.1&lt;/Future&gt;
+    &lt;Atemporal&gt;0.0&lt;/Atemporal&gt;
+  &lt;/probabilities&gt;
+&lt;/query&gt;
+&lt;query&gt;
+  &lt;id&gt;035&lt;/id&gt;
+  &lt;query_string&gt;value of silver dollars 1976&lt;/query_string&gt;
+  &lt;query_issue_time&gt;May 1, 2013 GMT+0&lt;/query_issue_time&gt;
+  &lt;probabilities&gt;
+    &lt;Past&gt;0.727&lt;/Past&gt;
+    &lt;Recency&gt;0.273&lt;/Recency&gt;
+    &lt;Future&gt;0.0&lt;/Future&gt;
+    &lt;Atemporal&gt;0.0&lt;/Atemporal&gt;
+  &lt;/probabilities&gt;
+&lt;/query&gt;
+		...</code></pre>
+	    <br>
+	    <h5>Query size for Dry Run (Training/Testing)</h5>
+	    <ul>
+	      <li>English: 93 (73/20)</li>
+	      <li>Chinese: 52 (34/18)</li>
+	    </ul>
 	    
+	    <br><br>
+	    <div class="line"></div>
+	    <br><br>
+	    
+	    <div id="TDR"><h3>Temporally Diversified Retrieval (TDR) Subtask</h3></div>
+	    TDR subtask will require participants to retrieve a set of documents relevant
+	    to each of four temporal intent classes for a given topic description.
+	    Participants are also asked to return a set of documents that is temporally diversifie for the same topic.
+	    Participants will receive a set of topic descriptions, query issuing time, and indicative search questions
+	    for each of temporal classes (Past, Recency, Future, and Atemporal).
+	    Indicative search questions show one possible subtopic under a particular temporal class.
+	    Participants are asked to develop a system that can produce a total of five search results
+	    per topic (Past, Recency, Future, Atemporal, and Diversified).
+	    This is an upgraded task from
+	    <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">
+	      Temporal Information Retrieval (TIR) subtask</a> at NTCIR-11 where
+	    participants were asked to retrieve documents for separate temporal subtopics.
+	    TDR is more challenging since the system needs to optimise ranking of documents
+	    for up to four different temporal classes for a given topic.
+
+	    <br><br>
+	    
+	    Participants are allowed to use any external resources to complete the TDR subtask
+	    as long as the detail of external resource usage is reported.
+	    This subtask requires to index our
+	    <a href="http://ntcirtemporalia.github.io/NTCIR-12/collection.html">document collections</a>.
+	    For evaluating the results, we plan to use nDCG@20 or P@20 for individual class search results,
+	    and ERR-IA and other intent-aware metrics for diversified search results.
+	    <br><br>
+
+	    <h5>Sample Topic</h5>
+	    <pre><code>&lt;topic&gt;
+  &lt;id&gt;002&lt;/id&gt;
+  &lt;title&gt;Junk food health effect&lt;/title&gt;
+  &lt;description&gt;I am concerned about the health effects of junk food in general. I need to know more about their ingredients, impact on health, history, current scientific discoveries and any prognoses.&lt;/description&gt;
+  &lt;query_issue_time&gt;Mar 29, 2013 GMT+0:00&lt;/query_issue_time&gt;
+  &lt;subtopics&gt;
+    &lt;subtopic id="002a" type="atemporal"&gt;How junk foods are defined?&lt;/subtopic&gt;
+    &lt;subtopic id="002p" type="past"&gt;When did junk foods become popular?&lt;/subtopic&gt;
+    &lt;subtopic id="002r" type="recency"&gt;What are the latest studies on the effect of junk foods on our health?&lt;/subtopic&gt;
+    &lt;subtopic id="002f" type="future"&gt;Will junk food continue to be popular in the future?&lt;/subtopic&gt;
+  &lt;/subtopics&gt;
+&lt;/topic&gt;</code></pre>
+	    <br>
+	    <h5>Topic Size for Dry Run</h5>
+	    <ul>
+	      <li>English: 10</li>
+	      <li>Chinese: 10</li>
+	    </ul>
+	    <h5>Topic Size for Formal Run</h5>
+	    <ul>
+	      <li>English: 50</li>
+	      <li>Chinese: 50</li>
+	    </ul>
+	    <br>
+	    
+	    <h5>Topic fields to use for your ranking</h5>
+	    It is up to you about what fields of topic descriptions are used as system inputs.
+	    However, please make sure to report the input fields when you submit a run
+	    and when you write a participant report. Typical combinations might be
+	    <br><br>
+	    <ul>
+	      <li>Title and subtopic</li>
+	      <li>Title, Description, and subtopic</li>
+	    </ul>
+	    Please do not use the subtopic class information.
+	    For the convenience of data management, subtopic IDs of TDR contain a token of temporal classes
+	    such as 001p for past subtopic and 001f for future subtopic.
+	    However, please do not use this token as an input to your system.
+	    <br><br>
+	    
+	    <h4>Feedback or suggestions?</h4>
+	    NTCIR-12 Temporalia welcomes any feedback or suggestions for our task design,
+	    please feel free to contact us via tc4fia at googlegroups dot com.
 	  </div>
 	</div>
       </div>
