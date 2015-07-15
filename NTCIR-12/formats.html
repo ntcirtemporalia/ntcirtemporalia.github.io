@@ -32,8 +32,52 @@
 	  </div>
 	  <div class="span9">
 	    <h3>Run Formats</h3>
+	    <p>All TID and TDR runs (a run refers to the results for a subtask) must be compressed (zip).
+	      Each team can submit up to 3 runs per subtask-language pair.
+	      As the run files must be encoded in UTF-8.</p>
 	    <br>
-	    TBA
+	    
+	    <h4>Run Names</h4>
+	    <p>Run files should be named as "<b>&lt;Group-ID&gt;-[TID/TDR]-[CE]-[1/2/3].txt</b>"</p>
+	    <p><b>&lt;Group-ID&gt;</b> is exactly the Group ID when you registered in NTCIR-12.</p>
+	    <p><b>[TID/TDR]</b>: Use either TID or TDR.
+		TID for Temporal Intent Disambiguation runs,
+		TDR for Temporally Diversified Retrieval runs.</p>
+	    <p><b>[CE]</b>: C for Chinese runs, E for English runs.</p>
+	    <p><b>[1/2/3]</b>: Use a number inside {1,2,3} to denote the priority of the run (1>2>3).
+	      Due to limited resources, we may not include all submitted runs in the result pool.
+	      Therefore, it is important for you to point out in which order we should take your
+	      runs into consideration for result pool construction.</p>
+	    <br>
+	    
+	    <h4>Temporal Intent Disambiguation (TID) Run Format</h4>
+	    <p>For all runs in TID, the first line of the run file must be of the form:</p>
+	    <pre><code>&lt;SYSDESC&gt;[insert a short description of your model in English here]&lt;/SYSDESC&gt;</code></pre>
+	    
+	    <p>The rest of the file should contain tab-separated lines of the
+	    form (probability value: 3 digits to the right of the decimal point):</p>
+	    <pre><code>[TopicID] [Probability of Past] [Probability of Recency] [Probability of Future] [Probability of Atemporal] [RunName]\n</pre></code>
+
+	    <p>For example, a segment of an English TID run should look like this:</p>
+	    <pre><code>074 0.250 0.250 0.250 0.250 ORG-TID-E-1
+075 0.250 0.250 0.250 0.250 ORG-TID-E-1</pre></code>
+	    <br><br>
+
+	    <h4>Temporally Diversified Retrieval (TDR) Run Format</h4>
+	    <p>You can return up to 100 documents for each subtopic.</p>
+	    <p>For all runs in TDR, the first line of the run file must be of the form:</p>
+	    <pre><code>&lt;SYSDESC&gt;[insert a short description of your model in English here]&lt;/SYSDESC&gt;</pre></code>
+
+	    <p>The rest of the file should contain tab separated lines of the form:</p>
+	    <pre><code>[id] [rank] [doc_id] [score] [RunName]\n</pre></code>
+
+	    <p>"id" is the query id, which is a concatenation of the query id and "p", "r", "f", "a" or "d"
+	    that indicate the past, recency, future, atemporal subtopics and diversified ranking respectively.
+	    "rank" is the rank of the document for that query.</p>
+
+	    <p>For example, a segment of an English TDR run should look like this:</p>
+	    <pre><code>001d 1 doc_i 0.25 ORG-TDR-E-1
+001d 2 doc_k 0.2  ORG-TDR-E-1</pre></code>
 	  </div>
 	</div>
       </div>

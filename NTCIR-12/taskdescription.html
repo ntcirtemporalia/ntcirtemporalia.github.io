@@ -4,6 +4,9 @@
     <meta name="viewport" content="width-device-width, initial-scale-1.0">
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../bootstrap/css/style.css" rel="stylesheet">
+    <script type="text/javascript"
+	    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
     <title>NTCIR Temporal Information Access (Temporalia) Task</title>
   </head>
   <body>
@@ -31,37 +34,34 @@
             </ul>
 	  </div>
 	  <div class="span9">
-	    <div class="alert alert-error"><b>Updated on 6th July 2015</b>
+	    <div class="alert alert-error"><b>Updated on 15th July 2015</b>
 	      <button type="button" class="close" data-dismiss="alert">&times;</button>
 	    </div>
-	    Temporalia-2 at NTCIR-12 offer two subtasks in English and Chinese to address temporal 
-	    information access technologies as follows. 
-	    Interested researchers and research groups can participate in either or both of the 
-	    subtasks in any combination of languages. 
-	    <br><br>
+	    <p>Temporalia-2 at NTCIR-12 offer two subtasks in English and Chinese to address temporal 
+	      information access technologies as follows. 
+	      Interested researchers and research groups can participate in either or both of the 
+	      subtasks in any combination of languages.</p>
+	    <br>
 	    <a href="#TID">TID Subtask</a>&nbsp; | &nbsp;
 	    <a href="#TDR">TDR Subtask</a>
 	    <br><br>
 
 	    <div id="TID"><h3>Temporal Intent Disambiguation (TID) Subtask</h3></div>
-	    TID subtask asks participants to estimate a distribution of four temporal intent classes
-	    (Atemporal, Past, Recent, or Future) for a given query.
-	    This is an upgraded task from 
-	    <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">
-	      Temporal Query Intent Classification (TQIC) subtask</a> at NTCIR-11, 
-	    where participants were only asked to estimate the best (single) temporal intent category 
-	    for a given query.
-	    Like the TQIC subtask, participants will receive a set of query strings and submission date, 
-	    and develop a system that estimates a distribution among four temporal intent classes. 
-	    TID will employ test queries more likely to be temporally ambiguous than those used in TQIC.
-	    The answer distribution is estimated from the voting crowd workers.
-	    <br>
-	    Participants are allowed to use any external resources to complete the TID subtask
-	    as long as the detail of external resource usage is reported.
-	    This subtask does not necessarily require to index our document collection.
-	    For evaluating the results,
-	    we plan to use Jensen-Shannon divergence averaged over all the queries and Root Mean Square Error.
-	    <br><br>
+	    <p>TID subtask asks participants to estimate a distribution of four temporal intent classes
+	      (Atemporal, Past, Recent, or Future) for a given query.
+	      This is an upgraded task from 
+	      <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">
+		Temporal Query Intent Classification (TQIC) subtask</a> at NTCIR-11, 
+	      where participants were only asked to estimate the best (single) temporal intent category 
+	      for a given query.
+	      Like the TQIC subtask, participants will receive a set of query strings and submission date, 
+	      and develop a system that estimates a distribution among four temporal intent classes. 
+	      TID will employ test queries more likely to be temporally ambiguous than those used in TQIC.
+	      The answer distribution is estimated from the voting crowd workers.</p>
+
+	    <p>Participants are allowed to use any external resources to complete the TID subtask
+	      as long as the detail of external resource usage is reported.
+	      This subtask does not necessarily require to index our document collection.</p>
 
 	    <h5>Sample query</h5>
 	    <pre><code>&lt;query&gt;
@@ -93,36 +93,49 @@
 	      <li>English: 93 (73/20)</li>
 	      <li>Chinese: 52 (34/18)</li>
 	    </ul>
-	    
+	    <br>
+	    <h5>TID Evaluation</h5>
+	    For a specific query \(q\), let \(P = \{p_1, p_2, p_3, p_4\}\)
+	    denote its standard temporal class distribution,
+	    and \(W = \{w_1, w_2, w_3, w_4\}\) denote the temporal class distribution from a participant.
+	    The classification loss for a single query will be measured using the following three ways.
 	    <br><br>
+
+	    <p><b>Metric-1</b>: Averaged per-class absolute loss, i.e., <br>
+	      <center>\(\frac{1}{4}\sum_{i=1}^4|w_i-p_i|\)</center></p>
+	    <p><b>Metric-2</b>: Cosine similarity between the two probability vectors \(P\) and \(W\), i.e., <br>
+	      <center>\(cos\theta = \frac{P \cdot W}{|P||W|}\ = \frac{\sum_{i=1}^4|p_i*w_i|}
+		{\sqrt{\sum_{i=1}^4p_i^2}*\sqrt{\sum_{i=1}^4w_i^2}}\)</center></p>
+	    
+	    <p>For example, suppose \(P=\{0.50,0.50,0.00,0.00\}\),
+	    and \(W=\{0.00,0.00,0.50,0.50\}\), then for metric-1,
+	    the metric value will be 0.5. And for metric-2, it is 0.</p>
+
+	    <p>final performance of a submitted run would be the averaged value across all test queries.</p>
+	    <br>
 	    <div class="line"></div>
 	    <br><br>
 	    
 	    <div id="TDR"><h3>Temporally Diversified Retrieval (TDR) Subtask</h3></div>
-	    TDR subtask will require participants to retrieve a set of documents relevant
-	    to each of four temporal intent classes for a given topic description.
-	    Participants are also asked to return a set of documents that is temporally diversifie for the same topic.
-	    Participants will receive a set of topic descriptions, query issuing time, and indicative search questions
-	    for each of temporal classes (Past, Recency, Future, and Atemporal).
-	    Indicative search questions show one possible subtopic under a particular temporal class.
-	    Participants are asked to develop a system that can produce a total of five search results
-	    per topic (Past, Recency, Future, Atemporal, and Diversified).
-	    This is an upgraded task from
-	    <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">
-	      Temporal Information Retrieval (TIR) subtask</a> at NTCIR-11 where
-	    participants were asked to retrieve documents for separate temporal subtopics.
-	    TDR is more challenging since the system needs to optimise ranking of documents
-	    for up to four different temporal classes for a given topic.
-
-	    <br><br>
+	    <p>TDR subtask will require participants to retrieve a set of documents relevant
+	      to each of four temporal intent classes for a given topic description.
+	      Participants are also asked to return a set of documents that is temporally diversifie for the same topic.
+	      Participants will receive a set of topic descriptions, query issuing time, and indicative search questions
+	      for each of temporal classes (Past, Recency, Future, and Atemporal).
+	      Indicative search questions show one possible subtopic under a particular temporal class.
+	      Participants are asked to develop a system that can produce a total of five search results
+	      per topic (Past, Recency, Future, Atemporal, and Diversified).
+	      This is an upgraded task from
+	      <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">
+		Temporal Information Retrieval (TIR) subtask</a> at NTCIR-11 where
+	      participants were asked to retrieve documents for separate temporal subtopics.
+	      TDR is more challenging since the system needs to optimise ranking of documents
+	      for up to four different temporal classes for a given topic.</p>
 	    
-	    Participants are allowed to use any external resources to complete the TDR subtask
-	    as long as the detail of external resource usage is reported.
-	    This subtask requires to index our
-	    <a href="http://ntcirtemporalia.github.io/NTCIR-12/collection.html">document collections</a>.
-	    For evaluating the results, we plan to use nDCG@20 or P@20 for individual class search results,
-	    and ERR-IA and other intent-aware metrics for diversified search results.
-	    <br><br>
+	    <p>Participants are allowed to use any external resources to complete the TDR subtask
+	      as long as the detail of external resource usage is reported.
+	      This subtask requires to index our
+	      <a href="http://ntcirtemporalia.github.io/NTCIR-12/collection.html">document collections</a>.</p>
 
 	    <h5>Sample Topic</h5>
 	    <pre><code>&lt;topic&gt;
@@ -151,19 +164,45 @@
 	    <br>
 	    
 	    <h5>Topic fields to use for your ranking</h5>
-	    It is up to you about what fields of topic descriptions are used as system inputs.
-	    However, please make sure to report the input fields when you submit a run
-	    and when you write a participant report. Typical combinations might be
-	    <br><br>
+	    <p>It is up to you about what fields of topic descriptions are used as system inputs.
+	      However, please make sure to report the input fields when you submit a run
+	      and when you write a participant report. Typical combinations might be</p>
 	    <ul>
 	      <li>Title and subtopic</li>
 	      <li>Title, Description, and subtopic</li>
 	    </ul>
-	    Please do not use the subtopic class information.
-	    For the convenience of data management, subtopic IDs of TDR contain a token of temporal classes
-	    such as 001p for past subtopic and 001f for future subtopic.
-	    However, please do not use this token as an input to your system.
-	    <br><br>
+	    <p>Please do not use the subtopic class information.
+	      For the convenience of data management, subtopic IDs of TDR contain a token of temporal classes
+	      such as 001p for past subtopic and 001f for future subtopic.
+	      However, please do not use this token as an input to your system.</p>
+	    <br>
+
+	    <h5>TDR Evaluation</h5>
+	    <p>For the evaluation, we will use the standard Cranfield methodology.
+	      In particular, a pool of possibly relevant documents is created based on
+	      the top-ranked documents from participants' submitted runs.
+	      Then each document in the pool will be assessed (e.g., through online crowdsourcing),
+	      and its relevance grade will be judged.</p>
+
+	    <p>A ranked list generated for a specific temporal subtopic,
+	      its performance will be evaluated using the metric nDCG (cf. [1]).</p>
+
+	    <p>A diversified ranked list generated to satisfy all possible temporal classes,
+	      its performance will be evaluated using α-nDCG (cf. [2]) and D#-nDCG (cf. [3]</p>
+	    
+	    <p>[1] Kalervo Järvelin and Jaana Kekäläinen.
+	      Cumulated gain-based evaluation of IR techniques.
+	      ACM Transactions on Information Systems, 20(4):422–446, 2002.</p>
+	    
+	    <p>[2] Charles L.A. Clarke, Maheedhar Kolla, Gordon V. Cormack,
+	      Olga Vechtomova, Azin Ashkan, Stefan Buttcher, and Ian MacKinnon.
+	      Novelty and diversity in information retrieval evaluation.
+	      In Proceedings of the 31st SIGIR, pages 659–666, 2008.</p>
+
+	    <p>[3] Tetsuya Sakai and Ruihua Song.
+	      Evaluating diversified search results using per-intent graded relevance.
+	      In Proceedings of the 34th SIGIR, pages 1043–1052, 2011.</p>
+	    <br>
 	    
 	    <h4>Feedback or suggestions?</h4>
 	    NTCIR-12 Temporalia welcomes any feedback or suggestions for our task design,
