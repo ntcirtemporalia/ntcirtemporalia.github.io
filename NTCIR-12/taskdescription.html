@@ -119,18 +119,25 @@
 	    <div id="TDR"><h3>Temporally Diversified Retrieval (TDR) Subtask</h3></div>
 	    <p>TDR subtask will require participants to retrieve a set of documents relevant
 	      to each of four temporal intent classes for a given topic description.
-	      Participants are also asked to return a set of documents that is temporally diversifie for the same topic.
-	      Participants will receive a set of topic descriptions, query issuing time, and indicative search questions
-	      for each of temporal classes (Past, Recency, Future, and Atemporal).
-	      Indicative search questions show one possible subtopic under a particular temporal class.
-	      Participants are asked to develop a system that can produce a total of five search results
-	      per topic (Past, Recency, Future, Atemporal, and Diversified).
-	      This is an upgraded task from
+	      Participants are also asked to return a set of documents that is
+	      temporally diversifie for the same topic.
+	      Participants will receive a set of topic descriptions, query issuing time,
+	      and indicative search questions for each of temporal classes
+	      (Past, Recency, Future, and Atemporal). <b>Please be careful.</b>
+	      Indicative search questions show only one possible subtopic under
+	      a particular temporal class as a reference.
+	      Therefore, participants are expected to mine other potential subtopics that
+	      are relevant to each of temporal classes.</p>
+
+	    <p>In summary, participants are asked to develop a system that can produce
+	      <span class="text-error"><b>a total of five search results per topic</b></span>
+	      (Past, Recency, Future, Atemporal, and Diversified).
+	      The first four results are similar to
 	      <a href="http://ntcirtemporalia.github.io/NTCIR-11/taskdescription.html">
-		Temporal Information Retrieval (TIR) subtask</a> at NTCIR-11 where
-	      participants were asked to retrieve documents for separate temporal subtopics.
-	      TDR is more challenging since the system needs to optimise ranking of documents
-	      for up to four different temporal classes for a given topic.</p>
+		Temporalia-1</a>,
+	      where ranking should be optimised for a particular temporal class,
+	      while the fifth result is the new element in Temporalia-2 where ranking should be
+	      temporally diversified by considering all four temporal classes.</p>
 	    
 	    <p>Participants are allowed to use any external resources to complete the TDR subtask
 	      as long as the detail of external resource usage is reported.
