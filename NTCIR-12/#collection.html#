@@ -33,11 +33,11 @@
 	  <div class="span9">
 	    <a href="#English">English Document Collection</a>&nbsp; | &nbsp;
 	    <a href="#Chinese">Chinese Document Collection</a><br><br>
-
+	    
 	    <div id="English"><h3>English document collection</h4></div>
 	    NTCIR-12 Temporalia uses a web corpus, called
-            "LivingKnowledge news and blogs annotated subcollection", constructed by the
-            <a href="http://internetmemory.org/en/index.php/projects/livingknowledge">LivingKnowledge</a>
+"LivingKnowledge news and blogs annotated subcollection", constructed by the
+<a href="http://internetmemory.org/en/index.php/projects/livingknowledge">LivingKnowledge</a>
             project and distributed by
             <a href="http://internetmemory.org/">Internet Memory</a>.<br><br>
             The collection is 20G uncompressed and over 5G zipped.
