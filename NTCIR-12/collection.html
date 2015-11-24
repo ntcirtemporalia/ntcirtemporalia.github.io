@@ -34,19 +34,21 @@
 	    <a href="#English">English Document Collection</a>&nbsp; | &nbsp;
 	    <a href="#Chinese">Chinese Document Collection</a><br><br>
 
-	    <div id="English"><h3>English document collection</h4></div>
-	    NTCIR-12 Temporalia uses a web corpus, called
-            "LivingKnowledge news and blogs annotated subcollection", constructed by the
-            <a href="http://internetmemory.org/en/index.php/projects/livingknowledge">LivingKnowledge</a>
-            project and distributed by
-            <a href="http://internetmemory.org/">Internet Memory</a>.<br><br>
-            The collection is 20G uncompressed and over 5G zipped.
-            It spans from May 2011 to March 2013 and contains around 3.8M documents collected
-            from about 1500 different blogs and news sources.
-            The data is split into 970 files, named after the date of that day and some information
-            about its sources (there might be more than one file per day).<br><br>
-            Each file contains a number of text documents.
-            For each document the following information is available <br><br>
+	    <div id="English"><h3>English document collection</h3></div>
+	    <p>NTCIR-12 Temporalia uses a web corpus, called
+              "LivingKnowledge news and blogs annotated subcollection", constructed by the
+              <a href="http://internetmemory.org/en/index.php/projects/livingknowledge">LivingKnowledge</a>
+              project and distributed by
+              <a href="http://internetmemory.org/">Internet Memory</a>.</p>
+	    
+            <p>The collection is 20G uncompressed and over 5G zipped.
+              It spans from May 2011 to March 2013 and contains around 3.8M documents collected
+              from about 1500 different blogs and news sources.
+              The data is split into 970 files, named after the date of that day and some information
+              about its sources (there might be more than one file per day).</p>
+
+            <p>Each file contains a number of text documents.
+              For each document the following information is available </p>
 	    <pre><code>&lt;doc id=lk-20130223040102_592&gt;
 &lt;meta-info&gt;
 &lt;tag name="host"&gt;www.spiegel.de&lt;/tag&gt;
@@ -57,54 +59,52 @@
 &lt;/meta-info&gt;
 &lt;text&gt;
 ...
-&lt;/text&gt;</code></pre><br>
-            The "doc id" refers to a unique document identifier in the collection.
-            The "host" contains the hostname the text was pulled from,
-            the "date" the publishing data of the document, the "url" text was pulled from,
-            the "sourcerss" the rss that was accessed to retrieve the page, and finally,
-            the "title" the title of the page.<br><br>
+&lt;/text&gt;</code></pre>
+	    
+            <p>The "doc id" refers to a unique document identifier in the collection.
+              The "host" contains the hostname the text was pulled from,
+              the "date" the publishing data of the document, the "url" text was pulled from,
+              the "sourcerss" the rss that was accessed to retrieve the page, and finally,
+              the "title" the title of the page.</p>
 
-	    Between the &lt;text&gt; tags, there’s the content of the page.
-            This collection also provides three kinds of annotations: Sentence splitting,
-            Named Entities, and Time annotations.
-            Each sentence in the content of the page is surrounded by &lt;SE&gt; tags.<br><br>
+	    <p>Between the &lt;text&gt; tags, there’s the content of the page.
+              This collection also provides three kinds of annotations: Sentence splitting,
+              Named Entities, and Time annotations.
+              Each sentence in the content of the page is surrounded by &lt;SE&gt; tags.</p>
 
-            Each identified named entity is surrounded by the &lt;E&gt; tags.
-            The type of the entity is included inside the tag, for instance
-            &lt;E type="E:ORGANIZATION:CORPORATION"&gt;YouWalkAway.com&lt;/E&gt;.<br><br>
+            <p>Each identified named entity is surrounded by the &lt;E&gt; tags.
+              The type of the entity is included inside the tag, for instance
+              &lt;E type="E:ORGANIZATION:CORPORATION"&gt;YouWalkAway.com&lt;/E&gt;.</p>
 
-            Each time reference identified in the text is surrounded by the tag &lt;T&gt;
-            &lt;T val="2012"&gt;the end of 2012&lt;/T&gt; which contains a "val" element
-            referring to the estimated point in time the annotation is referring to.<br><br>
+            <p>Each time reference identified in the text is surrounded by the tag &lt;T&gt;
+              &lt;T val="2012"&gt;the end of 2012&lt;/T&gt; which contains a "val" element
+              referring to the estimated point in time the annotation is referring to.</p>
 
-	    An example of documents can be found below.<br><br>
-            <a href="../sampledocs.png"><img src="../sampledocs.png" width="80%"></a><br><br>
-            We will provide a script to remove these annotations and leave only the textual
-            part of each page, if the participants wish to only use that.<br><br>
+	    <p>An example of documents can be found below.
+              <a href="../sampledocs.png"><img src="../sampledocs.png" width="80%"></a><br><br>
+              We will provide a script to remove these annotations and leave only the textual
+              part of each page, if the participants wish to only use that.</p>
 
             <h4>How to get a copy of the document collection</h4>
-            Please contact us email (tc4fia at googlegroups dot com)
-            first with your name, affiliation, and registered group id.
-            We will then let you know the contact address of Leïla Medjkoune, Head of Web Archiving,
-            <a href="http://internetmemory.org/">Internet Memory</a>,
-            who manages the distribution of the document collection.
-            <br><br>
+            <p>Please contact us email (tc4fia at googlegroups dot com)
+              first with your name, affiliation, and registered group id.
+              We will then let you know the contact address of Leïla Medjkoune, Head of Web Archiving,
+              <a href="http://internetmemory.org/">Internet Memory</a>,
+              who manages the distribution of the document collection.</p>
 
             <h4>How to remove tags and correct markup inconsistency</h4>
-            Please read <a href="http://ntcirtemporalia.github.io/NTCIR-12/howto.html">HOWTO and FAQ</a>.
-            <br><br><br>
+            <p>Please read <a href="http://ntcirtemporalia.github.io/NTCIR-12/howto.html">HOWTO and FAQ</a>.</p>
+            <br><br>
 
 	    <div class="line"></div><br>
 
 	    <div id="Chinese"><h3>Chinese document collection</h3></div>
-	    For NTCIR-12 Temporalia-2, the Chinese document collections 
-	    <a href="http://www.sogou.com/labs/dl/ca.html">SogouCA (2012)</a> and
-	    <a href="http://www.sogou.com/labs/dl/t-e.html">SogouT</a>
-	    will be used for dry-run and formal run respectively.
-	    <br><br>
+	    <p>For NTCIR-12 Temporalia-2, the Chinese document collections 
+	      <a href="http://www.sogou.com/labs/dl/ca.html">SogouCA (2012)</a> and
+	      <a href="http://www.sogou.com/labs/dl/t-e.html">SogouT</a>
+	      will be used for dry-run and formal run respectively.</p>
 	    
-	    For each document, the following informaton is available
-	    <br><br>
+	    <p>For each document, the following informaton is available</p>
 	    
             <pre><code>&lt;doc id=***&gt;
 &lt;meta-info&gt;
@@ -117,66 +117,61 @@
 &lt;text&gt;***&lt;/text&gt;
 &lt;/doc&gt;</code></pre><br>
 	    
-	    The "host" contains the hostname the document was pulled from, 
-	    the "date" is the publish date of the document,
-	    the "url" identifies the document was pulled from, and finally,
-	    the "title" the title of the page.
-	    <br><br>
+	    <p>The "host" contains the hostname the document was pulled from, 
+	      the "date" is the publish date of the document,
+	      the "url" identifies the document was pulled from, and finally,
+	      the "title" the title of the page.</p>
 
-	    Between the &lt;text&gt; tags, there's the content of the page.
-	    This collection also provides three kinds of annotations: 
-	    Sentence splitting, Named Entities, and Time annotations.
-	    Each sentence in the content of the page is surrounded by &lt;SE&gt; tags.<br><br>
+	    <p>Between the &lt;text&gt; tags, there's the content of the page.
+	      This collection also provides three kinds of annotations: 
+	      Sentence splitting, Named Entities, and Time annotations.
+	      Each sentence in the content of the page is surrounded by &lt;SE&gt; tags.</p>
 	    
-	    Each identified named entity is surrounded by the &lt;E&gt; tags.
-	    The type of the entity is included inside the tag.
-	    
-	    An example of documents can be found below.<br><br>
-	    <a href="../chinese_example.png"><img src="../chinese_example.png" width="80%"></a><br><br>
-	    
-	    Specifically, for Named Entities, there are totally 5 types of tags.
-	    PERSON, LOCATION, ORGANIZATION, GPE (geo-political entity), 
-	    MISC (by merging all but the four most dominant entity types into one general entity
-	    type called misc, i.e., miscellaneous).
-	    <br><br>
+	    <p>Each identified named entity is surrounded by the &lt;E&gt; tags.
+	      The type of the entity is included inside the tag.
+	      An example of documents can be found below.<br><br>
+	      <a href="../chinese_example.png"><img src="../chinese_example.png" width="80%"></a></p>
 
-	    For annotating temporal expressions, a variant of the standard format TIMEX3 used in
-	    TempEval task is applied.
-	    <br><br>
+	    <p>Specifically, for Named Entities, there are totally 5 types of tags.
+	      PERSON, LOCATION, ORGANIZATION, GPE (geo-political entity), 
+	      MISC (by merging all but the four most dominant entity types into one general entity
+	      type called misc, i.e., miscellaneous).</p>
 
-	    For more datails on the annotation attributes,
-	    please refert to 
-	    <a href="http://nlp.stanford.edu/pubs/joint-parse-ner.pdf">
-	      Joint Parsing and Named Entity Recognition</a>
-	    (by J. R. Finkel and C. D. Manning) and 
-	    <a href="http://www.timeml.org/tempeval2/tempeval2-trial/guidelines/timex3guidelines-072009.pdf">
-	      Guidelines for Temporal Expression Annotation for English for TempEval 2010</a>
-	    (by TimeML Working Group).
-	    <br><br>
-	    For dry-run, using the SogouCA (2012) cllection as the input,
-	    the script for generating the untagged and tagged collections is
-	    <a href="https://github.com/ntcirtemporalia/TemporaliaChTagger">TemporaliaChTagger</a>.
-	    (Note: Please follow the steps in "Readme.txt".
-	    It takes time when generating the tagged collection,
-	    since it just assembles two off-the-shelf open-source tools).
+	    <p>For annotating temporal expressions, a variant of the standard format TIMEX3 used in
+	      TempEval task is applied.</p>
+
+	    <p>For more datails on the annotation attributes,
+	      please refert to 
+	      <a href="http://nlp.stanford.edu/pubs/joint-parse-ner.pdf">
+		Joint Parsing and Named Entity Recognition</a>
+	      (by J. R. Finkel and C. D. Manning) and 
+	      <a href="http://www.timeml.org/tempeval2/tempeval2-trial/guidelines/timex3guidelines-072009.pdf">
+		Guidelines for Temporal Expression Annotation for English for TempEval 2010</a>
+	      (by TimeML Working Group).</p>
+
+	    <p>For dry-run, using the SogouCA (2012) cllection as the input,
+	      the script for generating the untagged and tagged collections is
+	      <a href="https://github.com/ntcirtemporalia/TemporaliaChTagger">TemporaliaChTagger</a>.
+	      (Note: Please follow the steps in "Readme.txt".
+	      It takes time when generating the tagged collection,
+	      since it just assembles two off-the-shelf open-source tools).</p>
 	    
-	    For the <span class="text-error"><b>formal run of the Chinese TDR</b></span> subtask,
-	    a subset of the entire SogouT is used.
-	    Since the publication date of a webpage is essential in this subtask,
-	    some ad-hoc rules for getting the publication date of a webpage are used to generate this subset.
-	    The finally used subset includes a number of 10,907,101 webpages.
-	    In view of the fact that we can not redistribute the data,
-	    and to alleviate the efforts in processing SogouT,
-	    <a href="https://www.dropbox.com/sh/tx8buhinkkvahi1/AABa3SZNACRm4X3wZl0GNL9xa?dl=0">FileExtractor.zip</a>
-	    is provided for participants to generate this subset based on SogouT by themselves.
-	    Please refer to the included Readme.txt (within FileExtractor.zip) on how to use it.
-	    
-	    Note: Please follow the steps in "Readme.txt".
-	    It takes time when generating the tagged collection,
-	    since it just assembles two off-the-shelf open-source tools.
-            </div>
-</div>
-</div>
-</div>
-</body>
+	    <p>For the <span class="text-error"><b>formal run of the Chinese TDR</b></span> subtask,
+	      a subset of the entire SogouT is used.
+	      Since the publication date of a webpage is essential in this subtask,
+	      some ad-hoc rules for getting the publication date of a webpage are used to generate this subset.
+	      The finally used subset includes a number of 10,907,101 webpages.
+	      In view of the fact that we can not redistribute the data,
+	      and to alleviate the efforts in processing SogouT,
+	      <a href="https://www.dropbox.com/sh/tx8buhinkkvahi1/AABa3SZNACRm4X3wZl0GNL9xa?dl=0">FileExtractor.zip</a>
+	      is provided for participants to generate this subset based on SogouT by themselves.
+	      Please refer to the included Readme.txt (within FileExtractor.zip) on how to use it.
+	      (Note: Please follow the steps in "Readme.txt".
+	      It takes time when generating the tagged collection,
+	      since it just assembles two off-the-shelf open-source tools.)</p>
+          </div>
+	</div>
+      </div>
+    </div>
+  </body>
 </html>
